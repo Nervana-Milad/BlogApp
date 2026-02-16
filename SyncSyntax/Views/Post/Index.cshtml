@@ -5,7 +5,24 @@
     ViewData["Title"] = "Blog Posts";
 }
 
-<div class="text-center m-3">
+<style>
+    .card-img-top {
+        height: 300px;
+        object-fit: cover;
+    }
+
+    @@media (max-width: 576px) {
+        .card-img-top
+
+    {
+        height: 200px;
+    }
+
+    }
+</style>
+
+
+<div class="text-center m-3 d-flex flex-wrap justify-content-center gap-2">
     @if(ViewBag.Categories != null)
     {
         @foreach(var category in ViewBag.Categories)
